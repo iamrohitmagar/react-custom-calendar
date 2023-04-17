@@ -1,0 +1,82 @@
+$calender-bg: aliceblue;
+$month-title: black;
+$week-day-title: gray;
+$selected-day-bg: #5c6ac4;
+$selected-day-border: 1px solid $selected-day-bg;
+$day-box-border: 1px solid #dfe3e8;
+
+
+.calendar-container{
+    max-width: 500px;
+    background-color: $calender-bg;
+    padding:10px;
+    box-shadow: 0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15);
+   
+    .month-title{
+        font-size: 1.2rem;
+        color: $month-title;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+
+    .weekday-container{
+        display:flex;
+    }
+
+    .week-day{
+        display:block;
+        flex: 1 0 0%;
+        padding: 0,8rem;
+        background: transparent;
+        font-size: 1.2 rem;
+        color: $week-day-title;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .week{
+        display:flex;
+    }
+
+    .day-box{
+        width: 15%;
+        display:block;
+        flex: 1 0 0%;
+        margin:0;
+        padding:0.8rem;
+        background: transparent;
+        border: $day-box-border;
+        border-radius : 0;
+        outline : none;
+        font-size: 1.2rem;
+        text-align: center;
+        cursor: pointer;
+    }
+
+
+    .selected-day-box{
+        display:block;
+        flex: 1 0 0%;
+        width: 15%;
+        margin:0;
+        padding:0.8rem;
+        background: $selected-day-bg;
+        border: $selected-day-border;
+        border-radius : 0;
+        outline : none;
+        font-size: 1.2rem;
+        text-align: center;
+        cursor: pointer;
+        color : white;
+    }
+
+    .empty-day-box{
+        display: block;
+        flex : 1 0 0%;
+        width: calc(100% / 7);
+        margin: 0;
+        padding:0.8rem;
+        border: $day-box-border;
+    }
+}
